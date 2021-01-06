@@ -8,10 +8,10 @@ echo "|	恶意二次修改或注入恶意代码 |"
 echo "|	在操作之前请详细阅读说明   |"
 echo "|	否则可能会对服务器造成损害 |"
 echo "------------------------------"
-echo "项目Github永久页面："
+echo "项目Github永久页面：https://github.com/2601677867/One-Click-Run_Source_Server"
 echo "作者:wTrace3zh荒年（原CS起源荒年服腐竹）"
 read -p "安装之前请详细阅读脚本说明，准备好了吗？（Y/N）" ready_or_not
-echo "[debug]$ready_or_not"
+
 
 Get_Dist_Name()
 {
@@ -47,7 +47,7 @@ else
 	echo "现在让我们检查下系统环境"
 	Get_Dist_Name
 	
-	echo "你的系统属于$DISTRO 系Linux"
+	echo "你的系统属于$DISTRO系Linux"
 	
 	if [ "$DISTRO" = "unknow" ];then 
 	echo "脚本暂不支持你目前使用的发行版，或许CSGO服务端仍适用于你的系统。如果你的发行版为Debian系或Redhat系，请在github内提交issue" 
@@ -60,27 +60,32 @@ if [ "$DISTRO" = "Debian" ];then
 	sleep 5
 	apt update -y
 	apt upgrade -y
+	apt-get install lib32stdc++6 -y
+    apt-get install lib32gcc1 -y
+	apt-get install screeen -y
 else
 	echo "更新将在5秒内开始，请确保您拥有高级权限或以root用户运行此脚本"
 	sleep 5
 	yum update -y
+	yum install glibc.i686 libstdc++.i686 -y
+	yum install glibc libstdc++ -y
+	yum install screen -y
 fi
 
 
 
-apt-get install lib32gcc1 -y
-apt-get install screeen -y
-apt-get install lib32stdc++6
-apt-get install lib32gcc1
+
+
+
 mkdir /csgo/
 mkdir /csgo/ds/
 cd /csgo/ds/
 wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
 tar -zxvf steamcmd_linux.tar.gz
 chmod 777 steamcmd.sh
-./steamcmd.sh +login anonymous +force_install_dir /csgo/ds/ +app_update 740 validate +quit
+./steamcmd.sh +login anonymous +force_install_dir /csgo/ds/server +app_update 740 validate +quit
 
-if [ -f "/csgo/ds/csgo/srcds_run" ];then
+if [ -f "/csgo/ds/server/csgo/srcds_run" ];then
 	echo "CSGO游戏服务端部署成功....."
 	
 else
@@ -88,3 +93,18 @@ else
 	exit 0
 
 fi
+
+cd /csgo/ds/server/csgo/
+echo "获取Sourcemod和metamod服务器插件系统"
+echo "脚本默认从稳定通道获取文件，如要使用测试版SM或MM请手动下载"
+wget https://sm.alliedmods.net/smdrop/1.11/sourcemod-1.11.0-git6653-linux.tar.gz
+tar -zxvf sourcemod-1.11.0-git6653-linux.tar.gz
+wget https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1144-linux.tar.gz
+tar -zxvf mmsource-1.11.0-git1144-linux.tar.gz
+rm -rf sourcemod-1.11.0-git6653-linux.tar.gz mmsource-1.11.0-git1144-linux.tar.gz
+echo "恭喜你，一个基础版游戏服务端已经部署成功！"
+echo "CSGO服务端安装路径:/csgo/ds/server/"
+echo "Steam命令行版客户端（Steamcmd）路径:/csgo/ds/"
+echo "！可以使用screen命令后台运行CSGO服务端"
+echo "！如果你喜欢这个脚本或脚本帮到了你的忙的话，请在GitHub页面点一个star吧"
+echo "！荒年的个人博客:www.wtrace3zh.today" 
