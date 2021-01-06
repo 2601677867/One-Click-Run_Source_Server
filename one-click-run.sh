@@ -1,12 +1,12 @@
 #!/bin/bash
 echo "------------------------------"
-echo "|	在你运行此脚本之前         |"
-echo "|请确保你的服务器符合架服配置|"
-echo "|且保证脚本在GitHub页面内获取|"
-echo "|	否则荒年不保证脚本是否被人 |"
-echo "|	恶意二次修改或注入恶意代码 |"
-echo "|	在操作之前请详细阅读说明   |"
-echo "|	否则可能会对服务器造成损害 |"
+echo "|	在你运行此脚本之前            |"
+echo "|请确保你的服务器符合架服配置     |"
+echo "|且保证脚本在GitHub页面内获取    |"
+echo "|	否则荒年不保证脚本是否被人      |"
+echo "|	恶意二次修改或注入恶意代码      |"
+echo "|	在操作之前请详细阅读说明        |"
+echo "|	否则可能会对服务器造成损害       |"
 echo "------------------------------"
 echo "项目Github永久页面：https://github.com/2601677867/One-Click-Run_Source_Server"
 echo "作者:wTrace3zh荒年（原CS起源荒年服腐竹）"
@@ -62,7 +62,7 @@ if [ "$DISTRO" = "Debian" ];then
 	apt upgrade -y
 	apt-get install lib32stdc++6 -y
     apt-get install lib32gcc1 -y
-	apt-get install screeen -y
+	apt-get install screen -y
 else
 	echo "更新将在5秒内开始，请确保您拥有高级权限或以root用户运行此脚本"
 	sleep 5
