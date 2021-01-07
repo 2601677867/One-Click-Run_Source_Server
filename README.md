@@ -65,7 +65,7 @@ xxxxxx 0x202/204 Error xxxxxx
 
 ## Q&A
 Q:你的联系方式/如何联系到你？如何提交脚本BUG？<br> 
-A:提交反馈BUG请在issue上提交，我的个人网站[一纸荒年Trace's Blog](www.wtrace3zh.today) 
+A:提交反馈BUG请在issue上提交，我的个人网站[一纸荒年Trace's Blog](https://www.wtrace3zh.today) 
 
 Q:脚本会不会危害我的服务器/你有没有往里面添加恶意代码来恶心不懂Linux的萌新？<br> 
 A:脚本是开源的，这意味着所有人都能看到全部源代码，如果我往里面添加恶心的东西的话应该早会被其他人发现举报封库，然后在起源圈疯狂批斗我的恶行。且我也没有任何理由要添加恶意代码，当然如果你要从非Github页面下载脚本的话我不保证有人会进行恶意二次修改。
