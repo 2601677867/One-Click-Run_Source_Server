@@ -1,12 +1,12 @@
 #!/bin/bash
 echo "------------------------------"
-echo "|	在你运行此脚本之前         |"
-echo "|请确保你的服务器符合架服配置|"
-echo "|且保证脚本在GitHub页面内获取|"
-echo "|	否则荒年不保证脚本是否被人 |"
-echo "|	恶意二次修改或注入恶意代码 |"
-echo "|	在操作之前请详细阅读说明   |"
-echo "|	否则可能会对服务器造成损害 |"
+echo "|        🚧 警告             |"
+echo "|    在使用此脚本前          |"
+echo "|  请确保您从Github页面获取  |"
+echo "| 否则荒年不保证脚本是否被人 |"
+echo "| 恶意二次修改或注入恶意代码 |"
+echo "| 在操作之前请详细阅读说明   |"
+echo "| 否则可能会对服务器造成损害 |"
 echo "------------------------------"
 echo "项目Github永久页面：https://github.com/2601677867/One-Click-Run_Source_Server"
 echo "作者:wTrace3zh荒年（原CS起源荒年服腐竹）"
@@ -51,11 +51,17 @@ else
 	
 	if [ "$DISTRO" = "unknow" ];then 
 	echo "脚本暂不支持你目前使用的发行版，或许服务端仍适用于你的系统。如果你的发行版为Debian系或Redhat系，请在github内提交issue" 
-	exit 0
-	fi
-fi
+	read -p "是否跳过系统检查强行继续(Y/N)" skip_system_check
+		if [ $skip_system_check = "Y" ];then
+			DISTRO="skip"
+		else
+			exit 0
+		fi
+	fi	
+fi	
 
-if [ "$DISTRO" = "Debian" ];then
+
+ if [ "$DISTRO" = "Debian" ];then
 	echo "更新将在5秒内开始，请确保您拥有高级权限或以root用户运行此脚本"
 	sleep 5
 	apt update -y
@@ -63,24 +69,34 @@ if [ "$DISTRO" = "Debian" ];then
 	apt-get install lib32stdc++6 -y
     apt-get install lib32gcc1 -y
 	apt-get install screen -y
-else
+elif [ $DISTRO = "Redhat" ];then
 	echo "更新将在5秒内开始，请确保您拥有高级权限或以root用户运行此脚本"
 	sleep 5
 	yum update -y
 	yum install glibc.i686 libstdc++.i686 -y
 	yum install glibc libstdc++ -y
 	yum install screen -y
+else
+	echo "正在以强制模式部署，请确保你安装了glibc.i686 libstdc++.i686 glibc libstdc++ "
 fi
 
 
-
 echo "要安装哪个游戏服务端"
-echo "输入740:CSGO服务端"
-echo "输入232330:CS起源服务端"
-echo "输入222860:L4D2服务端"
-echo "输入232250:TF2服务端"
-echo "其他游戏服务端请输入游戏DS SteamAppID"
-read -p "你想安装：" input_app_id
+echo "+------+----------+"
+echo "|AppID |游戏服务端|"
+echo "+------+----------+"
+echo "| 740  |  CS:GO   |"
+echo "+------+----------+"
+echo "|232330|  CS:起源 |"
+echo "+------+----------+"
+echo "|222860|  L4D2    |"
+echo "+------+----------+"
+echo "|232250|  TF2     |"
+echo "+------+----------+"
+echo "|17705 |  叛乱    |"
+echo "+------+----------+"
+echo "其他游戏服务端请访问https://developer.valvesoftware.com/wiki/Steam_Application_IDs 来获取服务端Appid"
+read -p "请输入Appid：" input_app_idd
 
 read -p "请输入服务器端安装路径（默认 /sourceserver/）(警告！手动输入路径时请使用绝对路径，以/开头)" install_path
 if [ "$install_path" = "" ];then
@@ -176,7 +192,24 @@ elif [ $input_app_id == "232250" ];then
 		echo "服务端文件下载失败，请在github内提交issue或重试"
 		exit 0
 	fi
-
+	
+elif [ $input_app_id == "17705" ];then
+	cd $install_path/game/
+	if [ -f "srcds_run" ];then
+	echo "获取Sourcemod和metamod服务器插件系统"
+		echo "脚本默认从稳定通道获取文件，如要使用测试版SM或MM请手动下载"
+		cd $install_path/game/insurgency/
+		wget https://sm.alliedmods.net/smdrop/1.11/sourcemod-1.11.0-git6653-linux.tar.gz
+		tar -zxvf sourcemod-1.11.0-git6653-linux.tar.gz
+		wget https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1144-linux.tar.gz
+		tar -zxvf mmsource-1.11.0-git1144-linux.tar.gz
+		rm -rf sourcemod-1.11.0-git6653-linux.tar.gz mmsource-1.11.0-git1144-linux.tar.gz
+		echo "恭喜你，一个基础版游戏服务端已经部署成功！"
+		echo "如果这个脚本帮到了你的话，请在脚本的Github页面点一个star吧！"
+	else
+		echo "服务端文件下载失败，请在github内提交issue或重试"
+		exit 0
+	fi
 
 else
 echo "脚本目前不支持本游戏服务器端安装Sourcemod与metamod，请手动安装"
