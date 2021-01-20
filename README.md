@@ -21,7 +21,7 @@
 | Raspbian   | 😁 | 🙄 |  
 | Arch       | 🤬 | 😡 |  
 
-*未列出的Debian系或Redhat系Linux发行版系统理论上支持
+
 
 ## 食用教程
 > 对于大佬们，记得使用root账户或者有权限能运行yum/apt命令的情况下执行脚本即可<br> 
@@ -62,6 +62,15 @@ Error! Falied to install app 'xxxxx' (No subscription)
 xxxxxx 0x202/204 Error xxxxxx
 ```
 你的服务器硬盘容量已经不足以下载游戏服务端，请更改安装路径或添加/扩容硬盘
+
+## 后续更新
+
+| 要做的  | 进展| 
+| ---------- | -----------|
+| 添加支援非Debian和Redhat系发行版     | 正在做 | 
+| 添加对游戏叛乱insurgency的支持       | 正在做 |
+
+
 
 ## Q&A
 Q:你的联系方式/如何联系到你？如何提交脚本BUG？<br> 
