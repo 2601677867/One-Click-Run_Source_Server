@@ -56,7 +56,7 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are y
 ```bash
 Error! Falied to install app 'xxxxx' (No subscription)
 ```
-你输入的Steam Appid不对，请按照Valvedeveloper Community的Steamcmd页面查找游戏服务端Steam Appid
+输入的Steam Appid错误，请访问[ValveDeveloper Community-Steam Application IDs](https://developer.valvesoftware.com/wiki/Steam_Application_IDs) 来寻找游戏服务端正确Appid
 
 ```bash
 xxxxxx 0x202/204 Error xxxxxx
