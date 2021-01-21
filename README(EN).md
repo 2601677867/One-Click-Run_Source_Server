@@ -24,49 +24,48 @@ This script allows you to quickly download the origin game server files to your 
 You can download the script to your server through the git. After you type the sudo command, the system may ask you to enter the password. It is strongly recommended to execute this script as the root account<br> 
 
 ```bash
-sudo yum install git -y ###仅限Redhat系Linux发行版
+sudo yum install git -y 
 git clone https://github.com/2601677867/One-Click-Run_Source_Server.git
 ```
-对于Debian系发行版系统
+Or
 ```bash
 sudo apt-get install git
 git clone https://github.com/2601677867/One-Click-Run_Source_Server.git
 ```
-随后您会在您的当前目录中找到One-Click-Run_Source_Server文件夹，随后请
+Then you will find the One-Click-Run_Source_Server folder in your current directory, then please
 ```bash
 cd One-Click-Run_Source_Server/
 sudo chmod 777 one-click-run.sh
 ./one-click-run.sh
 ```
-随后请按照脚本中文提示操作
 
-## 报错处理
+## Error Resolution
 
 ```bash
 E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
 E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
 ```
-请以root用户或在执行脚本前加上sudo，如果sudo不奏效请以root用户启动脚本，方法自行百度Google
+Please run this script with root privileges
 
 ```bash
 Error! Falied to install app 'xxxxx' (No subscription)
 ```
-输入的Steam Appid错误，请访问[ValveDeveloper Community-Steam Application IDs](https://developer.valvesoftware.com/wiki/Steam_Application_IDs) 来寻找游戏服务端正确Appid
+The Steam Appid entered  wrong, please visit[ValveDeveloper Community-Steam Application IDs](https://developer.valvesoftware.com/wiki/Steam_Application_IDs) To find the correct Appid on the game server
 
 ```bash
 xxxxxx 0x202/204 Error xxxxxx
 ```
-你的服务器硬盘容量已经不足以下载游戏服务端，请更改安装路径或添加/扩容硬盘
+The remaining space of your server hard disk is not enough to download the game server, please change the installation path or add/expand the hard disk
 
-## 更新日志
+## Change Log
 
-### 2020年1月20日更新 v1.5
-- 添加了对游戏叛乱insurgency的支持
-- 添加了跳过脚本自带系统检测，强制部署模式
+### v1.5
+- Added support for the game insurgency
+- Added skip script with built-in system detection, mandatory deployment mode
 - 优化排版
 
-### 2020年1月7日更新 v1.0 
-- 初始版本
+### v1.0 
+- initial version
 
 
 
