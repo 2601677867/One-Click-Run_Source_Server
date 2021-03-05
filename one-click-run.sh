@@ -10,6 +10,8 @@ echo "| 否则可能会对服务器造成损害 |"
 echo "------------------------------"
 echo "项目Github永久页面：https://github.com/2601677867/One-Click-Run_Source_Server"
 echo "作者:wTrace3zh荒年（原CS起源荒年服腐竹）"
+echo "荒年的个人网站:https://wtrace3zh.today"
+echo "荒年的B站频道主页：https://space.bilibili.com/319404588"
 read -p "安装之前请详细阅读脚本说明，准备好了吗？（Y/N）" ready_or_not
 
 
@@ -61,23 +63,45 @@ else
 fi	
 
 
- if [ "$DISTRO" = "Debian" ];then
-	echo "更新将在5秒内开始，请确保您拥有高级权限或以root用户运行此脚本"
+ if [ $DISTRO = "Debian" ];then
+	echo "系统运行环境将在5秒内开始，请确保您拥有高级权限或以root用户运行此脚本"
 	sleep 5
 	apt update -y
 	apt upgrade -y
 	apt-get install lib32stdc++6 -y
     apt-get install lib32gcc1 -y
 	apt-get install screen -y
+	apt-get install wget -y
+	apt-get install gzip -y
+	apt-get install tar -y
+	
 elif [ $DISTRO = "Redhat" ];then
-	echo "更新将在5秒内开始，请确保您拥有高级权限或以root用户运行此脚本"
+	echo "系统运行环境将在5秒内开始，请确保您拥有高级权限或以root用户运行此脚本"
 	sleep 5
 	yum update -y
 	yum install glibc.i686 libstdc++.i686 -y
 	yum install glibc libstdc++ -y
 	yum install screen -y
+	yum install wget -y
+	yum install gzip -y
+	yum install tar -y
 else
-	echo "正在以强制模式部署，请确保你安装了glibc.i686 libstdc++.i686 glibc libstdc++ "
+	echo "正在以强制模式部署，请确保你安装了以下程序"
+	echo "+------+-------------------+"
+	echo "|包名                      |"
+	echo "+------+-------------------+"
+	echo "|glibc.i686 libstdc++.i686 |"
+	echo "+------+-------------------+"
+	echo "|glibc libstdc++           |"
+	echo "+------+-------------------+"
+	echo "|screen                    |"
+	echo "+------+-------------------+"
+	echo "|wget                      |"
+	echo "+------+-------------------+"
+	echo "|gzip                      |"
+	echo "+------+-------------------+"
+	echo "|tar                      |"
+	echo "+------+-------------------+"
 fi
 
 
@@ -122,7 +146,7 @@ if [ $input_app_id == "740" ];then
 	cd $install_path/game/
 	if [ -f "srcds_run" ];then
 		echo "获取Sourcemod和metamod服务器插件系统"
-		echo "脚本默认从稳定通道获取文件，如要使用测试版SM或MM请手动下载"
+		echo "脚本默认从稳定通道获取文件，如要使用测试版Sourcemod或Metamod:Source请手动下载"
 		cd $install_path/game/csgo/
 		wget https://sm.alliedmods.net/smdrop/1.11/sourcemod-1.11.0-git6653-linux.tar.gz
 		tar -zxvf sourcemod-1.11.0-git6653-linux.tar.gz
@@ -140,7 +164,7 @@ elif [ $input_app_id == "232330" ];then
 	cd $install_path/game/
 	if [ -f "srcds_run" ];then
 	echo "获取Sourcemod和metamod服务器插件系统"
-		echo "脚本默认从稳定通道获取文件，如要使用测试版SM或MM请手动下载"
+		echo "脚本默认从稳定通道获取文件，如要使用测试版Sourcemod或Metamod:Source请手动下载"
 		cd $install_path/game/cstrike/
 		wget https://sm.alliedmods.net/smdrop/1.11/sourcemod-1.11.0-git6653-linux.tar.gz
 		tar -zxvf sourcemod-1.11.0-git6653-linux.tar.gz
@@ -159,7 +183,7 @@ elif [ $input_app_id == "222860" ];then
 	cd $install_path/game/
 	if [ -f "srcds_run" ];then
 	echo "获取Sourcemod和metamod服务器插件系统"
-		echo "脚本默认从稳定通道获取文件，如要使用测试版SM或MM请手动下载"
+		echo "脚本默认从稳定通道获取文件，如要使用测试版Sourcemod或Metamod:Source请手动下载"
 		cd $install_path/game/left4dead2/
 		wget https://sm.alliedmods.net/smdrop/1.11/sourcemod-1.11.0-git6653-linux.tar.gz
 		tar -zxvf sourcemod-1.11.0-git6653-linux.tar.gz
@@ -179,7 +203,7 @@ elif [ $input_app_id == "232250" ];then
 	cd $install_path/game/
 	if [ -f "srcds_run" ];then
 	echo "获取Sourcemod和metamod服务器插件系统"
-		echo "脚本默认从稳定通道获取文件，如要使用测试版SM或MM请手动下载"
+		echo "脚本默认从稳定通道获取文件，如要使用测试版Sourcemod或Metamod:Source请手动下载"
 		cd $install_path/game/tf2/
 		wget https://sm.alliedmods.net/smdrop/1.11/sourcemod-1.11.0-git6653-linux.tar.gz
 		tar -zxvf sourcemod-1.11.0-git6653-linux.tar.gz
@@ -197,7 +221,7 @@ elif [ $input_app_id == "17705" ];then
 	cd $install_path/game/
 	if [ -f "srcds_run" ];then
 	echo "获取Sourcemod和metamod服务器插件系统"
-		echo "脚本默认从稳定通道获取文件，如要使用测试版SM或MM请手动下载"
+		echo "脚本默认从稳定通道获取文件，如要使用测试版Sourcemod或Metamod:Source请手动下载"
 		cd $install_path/game/insurgency/
 		wget https://sm.alliedmods.net/smdrop/1.11/sourcemod-1.11.0-git6653-linux.tar.gz
 		tar -zxvf sourcemod-1.11.0-git6653-linux.tar.gz
