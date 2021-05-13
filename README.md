@@ -65,6 +65,15 @@ xxxxxx 0x202/204 Error xxxxxx
 
 ## 更新日志
 
+### 2021年5月13日更新 v2.0
+- 重写全部代码，修复v1.x版本特殊情况无法部署的BUG
+- 增加国内服务器加速下载Steamcmd功能
+- 优化排版
+
+TO DO:
+⚠如果你遇到 /steamcmd/linux32/steamcmd: cannot execute binary file: Exec format error 报错，请在Issues内提交您服务器系统信息（如发行版名称，版本号，服务器构架等）
+
+
 ### 2021年3月5日更新 v1.6
 - 增加系统运行环境检查功能，避免服务器出现缺少脚本所需命令
 - 优化排版
