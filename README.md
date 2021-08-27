@@ -1,5 +1,5 @@
 # One-Click-Run_Source_Server 一键部署起源服务端 
-一键在您的服务器上部署Source引擎游戏服务端（支持CSGO，L4D2，TF2，CSS等热门游戏）[English](https://github.com/2601677867/One-Click-Run_Source_Server/blob/main/README(EN).md)
+一键在您的服务器上部署Source引擎游戏服务端（支持CSGO，L4D2，TF2，CSS等热门游戏）
 ## 这是什么？🤷‍♀️
 这是一款可以让您在Linux主流发行版（Debian，Ubuntu，Centos7等）服务器上快速部署起源引擎游戏服务端，而不必亲自动手安装SteamCmd等服务端运行环境👍👍👍
 
@@ -12,7 +12,7 @@
 
 | 发行版  | 支持| 测试|
 | ---------- | -----------|---------- |
-| Ubuntu     | 😁 | ⚠ |     
+| Ubuntu     | 😁 | 😁 |     
 | CentOS7    | 😁 | 😁 |  
 | Debian     | 😁 | 🙄 |  
 | RHEL Server| 😁 | 🙄 | 
@@ -20,7 +20,7 @@
 | Fedora     | 😁 | 🙄 | 
 | Raspbian   | 😁 | 🙄 |  
 | Arch       | 🤬 | 😡 |  
-
+| WSL(Only 2)| 😁 | 😁 |
 
 
 ## 食用教程
@@ -65,14 +65,14 @@ xxxxxx 0x202/204 Error xxxxxx
 
 ## 更新日志
 
+### 2021年8月27日更新 v2.1
+- 更换国内Steamcmd镜像源
+- 增加对WSL用户的警示以及使用说明
+
 ### 2021年5月13日更新 v2.0
 - 重写全部代码，修复v1.x版本特殊情况无法部署的BUG
 - 增加国内服务器加速下载Steamcmd功能
 - 优化排版
-
-TO DO:
-⚠如果你遇到 /steamcmd/linux32/steamcmd: cannot execute binary file: Exec format error 报错，请在Issues内提交您服务器系统信息（如发行版名称，版本号，服务器构架等）
-
 
 ### 2021年3月5日更新 v1.6
 - 增加系统运行环境检查功能，避免服务器出现缺少脚本所需命令
