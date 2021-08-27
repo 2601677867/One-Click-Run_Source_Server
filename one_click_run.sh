@@ -82,7 +82,7 @@ Get_Steamcmd(){
 echo "获取Steam命令行版客户端（从荒年的国内服务器加速下载）"
 mkdir /steamcmd/
 cd /steamcmd/
-wget http://wtrace3zh.today/tools/steamcmd.tar.gz
+wget https://wtrace3zh.com/tools/steamcmd.tar.gz
 tar -zxvf steamcmd.tar.gz
 rm -rf steamcmd.tar.gz
 
@@ -203,8 +203,13 @@ echo "|对服务器造成损坏或任何财产损失  |"
 echo "|脚本作者不承担任何责任          |"
 echo "----------------------------------"
 echo "脚本官方Github页面：https://github.com/2601677867/One-Click-Run_Source_Server"
-echo "作者：一纸荒年Trace / B站：荒年不咕 / Github:Kevin Anderson"       
+echo "作者：一纸荒年Trace / B站：荒年不咕 / Github:2601677867"       
 echo "----------------------------------"
+echo "WSL用户请先将您的子系统升级为WSL 2后在执行此脚本！特别是当你运行时出现： "
+echo "cannot execute binary file: Exec format error 等相关错误时 "
+echo "请参考荒年博客内文章：《在WSL子系统下部署起源游戏服务器》"
+echo "链接：https://wtrace3zh.com/index.php/archives/26/"
+echo '"----------------------------------"'
 read -p "请仔细阅读以上安全注意事项，输入Y继续:" $ready_or_not
 
 
