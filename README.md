@@ -3,16 +3,16 @@
 
 ## !!本项目将不在继续维护和更新!!
 * 为什么？<br> 
-由于Shell 脚本的局限性，一键部署起源服务端脚本无法发展至一个多功能，易使用和更快速部署游戏服务端的工具，荒年深知V社设计的Steamcmd有多么的反人类式不便捷以及全英文对新手腐竹的不友好。<br> 
-所以荒年决定以一键部署起源服务端为蓝本，使用Python制作一个更棒的游戏服务端快速部署工具：SteamCMD++ <br> 
-SteamCMD++不仅支持部署Source引擎游戏服务器，其他热门游戏服务器；例如7 days to Die 七日杀 ARK: Survival Evolved 方舟进化生存 Unturned 未转变者 与 Terraria 泰拉瑞亚等热门游戏服务端与插件系统等<br>
+<br> 由于Shell 脚本的局限性，一键部署起源服务端脚本无法发展至一个多功能，易使用和更快速部署游戏服务端的工具，荒年深知V社设计的Steamcmd有多么的反人类式不便捷以及全英文对新手腐竹的不友好。<br> 
+<br> 所以荒年决定以一键部署起源服务端为蓝本，使用Python制作一个更棒的游戏服务端快速部署工具：SteamCMD++ <br> 
+<br> SteamCMD++不仅支持部署Source引擎游戏服务器，其他热门游戏服务器；例如7 days to Die 七日杀 ARK: Survival Evolved 方舟进化生存 Unturned 未转变者 与 Terraria 泰拉瑞亚等热门游戏服务端与插件系统等<br>
 
 * 这意味着什么？<br>
-这意味着我将不会在更新One-Click-Run_Source_Server，而是投入全部精力到SteamCMD++的开发中去。<br>
-但您仍可以按照本项目的使用方法使用此脚本，只是当遇到任何BUG和错误时我将不会提供任何解决方案和反馈<br>
+<br> 这意味着我将不会在更新One-Click-Run_Source_Server，而是投入全部精力到SteamCMD++的开发中去。<br>
+<br> 但您仍可以按照本项目的使用方法使用此脚本，只是当遇到任何BUG和错误时我将不会提供任何解决方案和反馈<br>
 
 * 设想不错！我在哪可以看到SteamCMD++的最新进展？<br>
-请访问我的个人博客[一纸荒年Trace's Blog](https://www.wtrace3zh.com) 来获得关于SteamCMD++的最新进展。<br>
+<br> 请访问我的个人博客[一纸荒年Trace's Blog](https://www.wtrace3zh.com) 来获得关于SteamCMD++的最新进展。<br>
 如果你对SteamCMD++又任何好想法或懂得Python且原因帮助这个开源项目开发，欢迎添加我的QQ:260167767（备注Steamcmd++）来与我商讨
 
 ## 这是什么？🤷‍♀️
