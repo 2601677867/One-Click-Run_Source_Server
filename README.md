@@ -55,7 +55,7 @@ git clone https://github.com/2601677867/One-Click-Run_Source_Server.git
 随后您会在您的当前目录中找到One-Click-Run_Source_Server文件夹，随后请
 ```bash
 cd One-Click-Run_Source_Server/
-sudo chmod 777 one-click-run.sh
+sudo chmod 777 one_click_run.sh
 ./one-click-run.sh
 ```
 随后请按照脚本中文提示操作
